@@ -25,10 +25,10 @@ public class Operators {
         // System.out.println(b);
 
         //Bitwise Operators
-        int a = 9;
-        int b = 7;
+        int a = 5;
+        int b = -3;
 
-        System.out.println(a^b);
+        System.out.println(5 >> 3);
     }
     
 }
