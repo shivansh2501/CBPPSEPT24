@@ -5,15 +5,63 @@ public class PatternPrintingQues {
 
     static void question6(int n) {
 
-        for(int i = 1 ; i <= n ; i++) {
+        for(int i = n ; i >=1  ; i--) {
             //k spaces
-            for(int j = 1 ; j <= (i-1)*2 ; j++) {
-                System.out.print("  ");
+            for(int j = 1 ; j <= 2*(n-i) ; j++) {
+                System.out.print(" ");
             }
 
             //Print Stars
-            for(int k = 1 ; k <= n - i + 1 ; k++) {
-                System.out.print("* ");
+            for(int k = 1 ; k <= i ; k++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
+    static void question7(int n) {
+
+        for(int i = 1 ; i <= n ; i++) {
+
+            for(int j = 1 ; j <= n ; j++) {
+                if(i==1 || i==n || j==1 || j==n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void question8(int n) {
+
+        for(int i = 1 ; i <= n ; i++) {
+            for(int j = 1 ; j <= n ; j++) {
+                if(i==j || j==n-i+1) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void question9(int n) {
+
+        for(int i = 1 ; i <= n ; i++) {
+            for(int j = 1 ; j <= n - i ; j++) {
+                System.out.print(" ");
+            } 
+
+            for(int k = 1 ; k <= i ; k++) {
+                System.out.print("*");
+            }
+
+            for(int l=2 ; l <= i ; l++) {
+                System.out.print("*");
             }
 
             System.out.println();
@@ -25,7 +73,7 @@ public class PatternPrintingQues {
 
         int n = sc.nextInt();
 
-        question6(n);
+        question9(n);
     }
     
 }
