@@ -46,8 +46,8 @@ public class PatternPrinting2 {
 
     static void printIRFT(int n) {
 
-        for(int i = 1 ; i <= n ; i++) {
-            for(int j = 1 ; j <= n - i + 1 ; j++) {
+        for(int i = n ; i >= 1 ; i--) {
+            for(int j = i ; j >= 1  ; j--) {
                 System.out.print("* ");
             }
             System.out.println();
@@ -56,14 +56,14 @@ public class PatternPrinting2 {
 
     static void printILFT(int n) {
         
-        for(int i = 1 ; i <= n ; i++) {
+        for(int i = n ; i >= 1 ; i--) {
             //Printing Spaces
-            for(int j = 1 ; j <= i - 1 ; j++) {
+            for(int j = n - i ; j >= 1  ; j--) {
                 System.out.print("  ");
             }
 
             //Printing Star
-            for(int k = 1 ; k <= n - i + 1 ; k++) {
+            for(int k = i ; k >= 1 ; k--) {
                 System.out.print("* ");
             }
 
