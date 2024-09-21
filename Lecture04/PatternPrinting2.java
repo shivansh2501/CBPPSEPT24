@@ -20,8 +20,8 @@ public class PatternPrinting2 {
     static void printRFT(int n) {
         //Printing Right Facing Triangle
         for(int i = 1 ; i <= n ; i++) {
-            for(int j = 1 ; j <= i ; j++) {
-                System.out.print("* ");
+            for(int j = 2 ; j <= i ; j++) {
+                System.out.print(j + " ");
             }
             System.out.println();
         }
@@ -83,7 +83,7 @@ public class PatternPrinting2 {
 
         // printSquare(n);
 
-        printILFT(n);
+        printRFT(n);
 
         sc.close();
     }
