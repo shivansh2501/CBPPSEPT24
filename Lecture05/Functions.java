@@ -31,6 +31,28 @@ public class Functions {
 
     }
 
+    //Redo this problem to reverse a number
+    static int reverse(int n) {
+
+        int len = 0;
+        int temp = n;
+
+        while(temp!=0) {
+            temp /= 10;
+            len++;
+        }
+
+        int reverse = 0;
+
+        while(n!=0) {
+            reverse += (n % 10) * (int)Math.pow(10,len-1);
+            len--;
+            n = n / 10;
+        }
+
+        return reverse;
+    }
+
     public static void main (String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -38,6 +60,7 @@ public class Functions {
         int n = sc.nextInt();
 
         System.out.println(ArmstrongNum(n));
+        System.out.println(reverse(n));
 
     }
     
