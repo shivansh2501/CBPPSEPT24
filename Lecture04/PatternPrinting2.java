@@ -168,6 +168,34 @@ public class PatternPrinting2 {
         }
     }
 
+    static void question12(int n) {
+
+        for(int i = 1 ; i <= n ; i++) {
+
+            for(int j = 1 ; j <= n - i ; j++) {
+                System.out.print(" ");
+            }
+
+            for(int k = 1 ; k <= i ; k++) {
+                if(k%2 == 0) {
+                    System.out.print("!");
+                } else {
+                    System.out.print("*");
+                }
+            }
+
+            for(int l = 2 ; l <= i ; l++) {
+                if((i % 2 == 0 && l % 2 == 0) || (i % 2 != 0 && l % 2 != 0)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print("!");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+
     public static void main (String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -180,7 +208,7 @@ public class PatternPrinting2 {
 
         // printSquare(n);
 
-        question11(n);
+        question12(n);
 
         sc.close();
     }
