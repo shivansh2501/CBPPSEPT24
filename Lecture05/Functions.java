@@ -37,11 +37,7 @@ public class Functions {
 
         int n = sc.nextInt();
 
-        if(ArmstrongNum(n)) {
-            System.out.println("Armstrong Number");
-        } else {
-            System.out.println("Not an Armstrong Number");
-        }
+        System.out.println(ArmstrongNum(n));
 
     }
     
