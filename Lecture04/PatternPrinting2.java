@@ -196,6 +196,216 @@ public class PatternPrinting2 {
         }
     }
 
+    static void question16 (int n) {
+
+        //Printing the upper tower
+        for(int i = n ; i >= 1 ; i--) {
+            for(int j = 1 ; j <= i - 1 ; j++) {
+                System.out.print("  ");
+            }
+
+            for(int k = 1 ; k <= i ; k++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+        for(int i = 2 ; i <= n ; i++) {
+            for(int j = 1 ; j <= i - 1 ; j++) {
+                System.out.print("  ");
+            }
+
+            for(int k = 1 ; k <= i ; k++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+
+    static void question17 (int n) {
+
+        for(int i = n/2 ; i >= 1 ; i--) {
+
+            for(int j = 1 ; j <= i ; j++) {
+                System.out.print("* ");
+            }
+
+            //Spaces
+            for(int k = 1 ; k <= n/2 - i + 1 ; k++) {
+                System.out.print("  ");
+            }
+
+            for(int m = 2 ; m <= n/2 - i + 1 ; m++) {
+                System.out.print("  ");
+            }
+
+            //Second Tower
+            for(int l = 1 ; l <= i ; l++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+        System.out.println();
+
+        for(int i = 1 ; i <= n/2 ; i++) {
+
+            for(int j = 1 ; j <= i ; j++) {
+                System.out.print("* ");
+            }
+
+            //Spaces
+            for(int k = 1 ; k <= n/2 - i + 1 ; k++) {
+                System.out.print("  ");
+            }
+
+            for(int m = 2 ; m <= n/2 - i + 1 ; m++) {
+                System.out.print("  ");
+            }
+
+            //Second Tower
+            for(int l = 1 ; l <= i ; l++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+
+    static void question18 (int n) {
+
+        for(int i = 1 ; i <= n/2 + 1 ; i++) {
+
+            for(int j = 1 ; j <= n/2 + 1 - i ; j++) {
+                System.out.print("  ");
+            }
+
+            for(int k = 1 ; k <= i ; k++) {
+                System.out.print("* ");
+            }
+
+            for(int l = 2 ; l <= i ; l++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+        for(int i = n/2 ; i >= 1; i--) {
+
+            for(int j = 1 ; j <= n/2 + 1 - i ; j++) {
+                System.out.print("  ");
+            }
+
+            for(int k = 1 ; k <= i ; k++) {
+                System.out.print("* ");
+            }
+
+            for(int l = 2 ; l <= i ; l++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+
+    static void question19 (int n) {
+
+        for(int i = n/2 + 1 ; i >= 1 ; i--) {
+
+            for(int j = 1 ; j <= i ; j++) {
+                System.out.print("* ");
+            }
+
+            for(int k = 2 ; k <= n/2 + 1 - i + 1 ; k++) {
+                System.out.print("  ");
+            }
+
+            for(int l = 3 ; l <= n/2 + 1 - i + 1; l++) {
+                System.out.print("  ");
+            }
+
+            for(int m = 1 ; m <= i && m <= n/2; m++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+
+        for(int i = 2 ; i <= n/2 + 1 ; i++) {
+
+            for(int j = 1 ; j <= i ; j++) {
+                System.out.print("* ");
+            }
+
+            for(int k = 2 ; k <= n/2 + 1 - i + 1 ; k++) {
+                System.out.print("  ");
+            }
+
+            for(int l = 3 ; l <= n/2 + 1 - i + 1; l++) {
+                System.out.print("  ");
+            }
+
+            for(int m = 1 ; m <= i && m <= n/2; m++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        }
+    }
+
+    static void question20 (int n) {
+
+        for(int i = n/2 + 1 ; i >= 1 ; i--) {
+
+            for(int j = 2 ; j <= i ; j++) {
+                System.out.print("  ");
+            }
+
+            System.out.print("* ");
+
+            for(int k = 1 ; k <= (n/2 + 1) - i; k++) {
+                System.out.print("  ");
+            }
+
+            for(int k = 2 ; k <= (n/2 + 1) - i; k++) {
+                System.out.print("  ");
+            }
+
+            if(i<=(n/2)) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        for(int i = 2 ; i <= n/2 + 1 ; i++) {
+
+            for(int j = 2 ; j <= i ; j++) {
+                System.out.print("  ");
+            }
+
+            System.out.print("* ");
+
+            for(int k = 2 ; k <= (n/2 + 1) - i + 1; k++) {
+                System.out.print("  ");
+            }
+
+            for(int k = 3 ; k <= (n/2 + 1) - i + 1; k++) {
+                System.out.print("  ");
+            }
+
+            if(i<=(n/2)) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+
     public static void main (String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -208,7 +418,7 @@ public class PatternPrinting2 {
 
         // printSquare(n);
 
-        question12(n);
+        question20(n);
 
         sc.close();
     }
