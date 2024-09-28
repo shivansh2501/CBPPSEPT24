@@ -36,7 +36,8 @@ public class PracticeArray {
         }
 
         // Copy the new reversed array to the old array
-        for(int i = 0 ; i < arr.length ; i++) {
+        // arr = newArr; //Shallow Copy
+        for(int i = 0 ; i < arr.length ; i++) { // Deep Copy
             arr[i] = newArr[i];
         }
 
@@ -63,8 +64,6 @@ public class PracticeArray {
         // swap(arr, i, j);
 
         int[] arr = {1,2,3,4,5};
-
-        display(arr);
 
         reverseProp(arr);
 
