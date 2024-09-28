@@ -43,6 +43,16 @@ public class PracticeArray {
 
     }
 
+    static void reverse2 (int[] arr) {
+
+        for(int i = 0, j = arr.length - 1 ; i < j ; i++, j--) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+    }
+
     public static void main(String[] args) {
         
         // int[] arr = {1, 2, 3, 4, 5};
@@ -65,7 +75,7 @@ public class PracticeArray {
 
         int[] arr = {1,2,3,4,5};
 
-        reverseProp(arr);
+        reverse2(arr);
 
         display(arr);
 
