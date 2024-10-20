@@ -11,7 +11,7 @@ public class bubbleSort {
 
         print(arr);
 
-        insertionSort(arr);
+        shiftByOne(arr);
 
         print(arr);
 
@@ -50,5 +50,16 @@ public class bubbleSort {
                 }
             }
         }
+    }
+
+    static void shiftByOne(int[] arr) {
+
+        int key = arr[arr.length - 1];
+
+        for(int i = arr.length - 1 ; i > 0 ; i--) {
+            arr[i] = arr[i-1];
+        }
+
+        arr[0] = key;
     }
 }
