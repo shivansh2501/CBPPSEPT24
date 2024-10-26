@@ -59,7 +59,7 @@ public class BinarySearch {
     }
 
 
-    // upperBound is a mathematical terms used to describe the "Last Occurence of an Element + 1"
+    // upperBound is a mathematical term used to describe the "Last Occurence of an Element + 1"
     public static int upperBound(int[] arr, int target) {
 
         int low = 0, high = arr.length - 1;
