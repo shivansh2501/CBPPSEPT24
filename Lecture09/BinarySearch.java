@@ -9,9 +9,10 @@ public class BinarySearch {
 
         int[] arr = {1, 1, 1, 2, 2, 3, 4, 4};
 
-        int target = 60;
+        int target = 2;
 
         System.out.println(upperBound(arr, target));
+        System.out.println(countOccurences(arr, target));
 
     }
 
@@ -81,6 +82,11 @@ public class BinarySearch {
 
         return ans;
 
+    }
+
+    public static int countOccurences(int[] arr, int num) {
+
+        return (upperBound(arr,num) - lowerBound(arr,num));
     }
     
 }
