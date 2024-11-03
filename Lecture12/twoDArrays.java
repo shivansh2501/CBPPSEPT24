@@ -10,6 +10,8 @@ public class twoDArrays {
         // int[][][][] arr2 = new int[3][4][1][5];
         // System.out.println(arr2);
 
+        //Completely Sorted 2D Array - Flatten your 2D Array, Sort the flattened array, fill the 2D MATRIX
+
         Scanner sc = new Scanner(System.in);
 
         int m = sc.nextInt();
