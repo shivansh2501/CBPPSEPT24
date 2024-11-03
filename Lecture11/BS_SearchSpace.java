@@ -4,10 +4,10 @@ public class BS_SearchSpace {
 
     public static void main(String[] args) {
 
-        int distance = 100;
-        int time = 2;
+        int distance = 421;
+        int time = 6;
 
-        System.out.println(reachCenter(100, 2));
+        System.out.println(reachCenter(distance, time));
 
 
     }
@@ -24,7 +24,7 @@ public class BS_SearchSpace {
         int high = 200;
         int low = 0;
 
-        int ans = 0;
+        int ans = -1;
 
         while(low <= high) {
             int mid = (high + low)/ 2;
