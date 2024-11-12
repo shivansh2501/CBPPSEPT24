@@ -1,6 +1,6 @@
 package PracticeArray;
-
 import java.util.*;
+
 public class practiceArr {
     public static void main(String args[]) {
 
@@ -8,65 +8,60 @@ public class practiceArr {
 
 		int n = sc.nextInt();
 
-		for(int i = 1 ; i <= (n/2) + 1 ; i++) {
+		int[] arr = new int[n];
 
-			for(int j = 2*(n-i) ; j >= 1 ; j--) {
-				System.out.print(" " + " ");
-			}
+		Random rand = new Random();
 
-			int printVal = i;
-
-			for(int k = 1 ; k <= i ; k++) {
-				System.out.print(printVal-- + " ");
-			}
-
-			for(int l = 2 ; l <= i ; l++) {
-				System.out.print(" " + " ");
-			}
-
-			for(int m = 3 ; m <= i ; m++) {
-				System.out.print(" " + " ");
-			}
-
-			printVal+= 1;
-
-			for(int o = 1 ; o <= i && i>=2; o++) {
-				System.out.print(printVal++ + " ");
-			}
-
-			System.out.println();
-
+		for(int i = 0 ; i < arr.length ; i++) {
+			arr[i] = rand.nextInt(9);
 		}
 
-		for(int i = (n/2) ; i >= 1 ; i--) {
+		printArray(arr);
 
-			for(int j = 2*(n-i) ; j >= 1 ; j--) {
-				System.out.print(" " + " ");
-			}
+		int[] result = plusOne(arr);
 
-			int printVal = i;
-
-			for(int k = 1 ; k <= i ; k++) {
-				System.out.print(printVal-- + " ");
-			}
-
-			for(int l = 2 ; l <= i ; l++) {
-				System.out.print(" " + " ");
-			}
-
-			for(int m = 3 ; m <= i ; m++) {
-				System.out.print(" " + " ");
-			}
-
-			printVal+= 1;
-
-			for(int o = 1 ; o <= i && i>=2; o++) {
-				System.out.print(printVal++ + " ");
-			}
-
-			System.out.println();
-
-		}
+		printArray(result);
 
     }
+
+	static void printArray(int[] arr) {
+
+		for(int i = 0 ; i < arr.length ; i++) {
+			System.out.print(arr[i] + " ");
+		}
+
+		System.out.println();
+
+	}
+
+		public static int[] plusOne(int[] digits) {
+	
+			ArrayList<Integer> result = new ArrayList<>();
+	
+			int i = digits.length - 1;
+			int carry = 0;
+	
+			while(i >= 0 || carry > 0) {
+				int currDig = carry;
+	
+				if(i >= 0) {
+					currDig += digits[i];
+				}
+	
+				carry = currDig / 10;
+				currDig = currDig % 10;
+				result.add(currDig);
+			}
+	
+			Collections.reverse(result);
+	
+			int[] arr = new int[result.size()];
+	
+			for(int j= 0 ; j < arr.length ; j++) {
+				arr[j] = result.get(j);
+			}
+	
+			return arr;
+	
+		}
 }
