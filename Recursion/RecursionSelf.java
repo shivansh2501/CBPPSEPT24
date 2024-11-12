@@ -24,9 +24,27 @@ public class RecursionSelf {
 
         System.out.println();
 
-        displayReverse(arr, arr.length - 1);
+        System.out.println("Max el is at: "+ maxArray(arr, arr.length - 1));
 
         // printName(n);
+
+    }
+
+    static int max = Integer.MIN_VALUE;
+
+    public static int maxArray(int[] arr, int n) {
+
+        if(n < 0) {
+            return max;
+        }
+
+        int max = maxArray(arr, n - 1);
+
+        if(arr[n] > max) {
+            max = n;
+        }
+
+        return max;
 
     }
 
