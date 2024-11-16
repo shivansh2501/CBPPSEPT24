@@ -12,21 +12,23 @@ public class RecursionSelf {
         int n = sc.nextInt();
         // int i = sc.nextInt();
 
-        Random rand = new Random();
+        // Random rand = new Random();
 
-        int[] arr = new int[n];
+        // int[] arr = new int[n];
 
-        for(int i = 0 ; i < arr.length ; i++) {
-            arr[i] = rand.nextInt(10);
-        }
+        // for(int i = 0 ; i < arr.length ; i++) {
+        //     arr[i] = rand.nextInt(10);
+        // }
 
-        printArray(arr, arr.length - 1);
+        // printArray(arr, arr.length - 1);
 
-        System.out.println();
+        // System.out.println();
 
-        System.out.println("Max el is at: "+ maxArray(arr, arr.length - 1));
+        // System.out.println("Max el is at: "+ maxArray(arr, arr.length - 1));
 
         // printName(n);
+
+        pzz(n);
 
     }
 
@@ -45,6 +47,20 @@ public class RecursionSelf {
         }
 
         return max;
+
+    }
+
+    public static void pzz(int n) {
+
+        if(n==0) {
+            return;
+        }
+
+        System.out.println("Pre " + n);
+        pzz(n-1);
+        System.out.println("In " + n);
+        pzz(n-1);
+        System.out.println("Post " + n);
 
     }
 
