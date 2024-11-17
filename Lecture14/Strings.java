@@ -30,9 +30,9 @@ public class Strings {
         // System.out.println(s6.toLowerCase());
         // System.out.println(s6.toUpperCase());
 
-        String name = "Shivansh";
+        String name = "ABCDCBA";
 
-        System.out.println(firstOcc(name, 3));
+        System.out.println(isStringPalindrome(name));
 
 
     }
@@ -85,6 +85,27 @@ public class Strings {
 
 
         return ans;
+    }
+
+    // Write a function to determine whether a string is a palindrome or not!
+    static boolean isStringPalindrome(String str) {
+
+        int i = 0, j = str.length() - 1;
+
+        while(i < j) {
+
+            if(str.charAt(i) != str.charAt(j)) {
+
+                return false;
+
+            }
+
+            i++; j--;
+
+        }
+
+        return true;
+
     }
 
 }
