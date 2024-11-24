@@ -6,7 +6,7 @@ public class Recursion2 {
         
         // System.out.println(countSubseq2("car", "", 1));
 
-        generatePerm("car", "");
+        generatePerm("abc", "");
     }
     
     //WAP to generate all the subsequences
@@ -111,3 +111,5 @@ public class Recursion2 {
     }
 
 }
+
+// Tower of Hanoi
