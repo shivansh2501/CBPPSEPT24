@@ -4,7 +4,9 @@ public class Recursion2 {
 
     public static void main(String[] args) {
         
-        System.out.println(countSubseq("car", ""));
+        // System.out.println(countSubseq2("car", "", 1));
+
+        generatePerm("car", "");
     }
     
     //WAP to generate all the subsequences
@@ -42,6 +44,23 @@ public class Recursion2 {
         return inc + notInc;
     }
 
+    //WAP a program to count the subsequeces in a string! (Tail Recursion)
+    static int countSubseq2(String ques, String ans, int count) {
+
+        if(ques.length() == 0) {
+            return count;
+        }
+
+        char a = ques.charAt(0);
+
+        //Include character
+        int inc = countSubseq2(ques.substring(1), ans + a, count);
+        //Don't include the character
+        int notInc = countSubseq2(ques.substring(1), ans, count);
+
+        return inc + notInc;
+    }
+
     //Coin toss
     static void CoinToss(int n, String s) {
 
@@ -52,6 +71,42 @@ public class Recursion2 {
 
         CoinToss(n - 1, s + "H");
         CoinToss(n - 1, s + "T");
+
+    }
+
+    //Generating Paranthesis
+    static void generateParanthesis(int n, int l, int r, String ans) {
+
+        if(r==l && n == l) {
+            System.out.println(ans);
+            return;
+        }
+
+        if(l > n || r > l) {
+            return;
+        }
+
+
+        generateParanthesis(n, l + 1, r, ans + "{");
+
+        generateParanthesis(n, l, r + 1, ans + "}");
+
+
+    } 
+
+    //Generate Permutations
+    static void generatePerm(String s, String ans) {
+
+        if(s.length() == 0) {
+            System.out.println(ans);
+            return;
+        }
+
+        for(int i = 0 ; i < s.length() ; i++) {
+
+            generatePerm(s.substring(0, i) + s.substring(i+1), ans + s.charAt(i));
+
+        }
 
     }
 
